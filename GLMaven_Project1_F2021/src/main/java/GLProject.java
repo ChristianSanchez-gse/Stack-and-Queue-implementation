@@ -15,6 +15,10 @@ public class GLProject {
 		myQueue.enqueue(4);
 		myQueue.enqueue(5);
 		myQueue.enqueue(6);
+		for(int i : myQueue)
+		{
+			System.out.println(i);
+		}
 		//myQueue.dequeue();
 		//System.out.println(myQueue.dumpList());
 		System.out.println("This should be 8:"+ myQueue.get(0));
@@ -30,10 +34,7 @@ public class GLProject {
 		myStack.set(1, 420);
 		System.out.println(myStack.dumpList());
 		
-		for(int i : myQueue)
-		{
-			System.out.println(i);
-		}
+
 	}
 }
    
