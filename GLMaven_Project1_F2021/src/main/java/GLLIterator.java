@@ -15,11 +15,9 @@ public class GLLIterator<T> implements Iterator<T> {
 	}
 
 	@Override
+	// Advances to the next node and returns the data.
 	public T next() {
-		System.out.println("This is the current node: " + curr.getData() + "This is the next one: " + curr.getNext().getData());
-		
-		curr.setNext(curr.getNext());
-		System.out.println("Now this is the current: " + curr.getData());
+		curr = curr.getNext();
 		return curr.getData();
 	}
 
