@@ -32,6 +32,10 @@ public class GLProject {
 		myStack.push(4);
 		myStack.push(34);
 		myStack.set(1, 420);
+		for(int i : myStack)
+		{
+			System.out.println(i);
+		}
 		System.out.println(myStack.dumpList());
 		
 

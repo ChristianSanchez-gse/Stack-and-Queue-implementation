@@ -55,7 +55,6 @@ public class GenericStack<T> extends GenericList<T>
 
 	@Override
 	public Iterator<T> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return new GLLIterator<T>(this.getHead());
 	}
 }
