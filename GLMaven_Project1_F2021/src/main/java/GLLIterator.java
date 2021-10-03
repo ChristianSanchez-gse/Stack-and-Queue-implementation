@@ -10,6 +10,7 @@ public class GLLIterator<T> implements Iterator<T> {
 		// checks if there are more elements available
 		if (curr != null && curr.getNext() != null)
 		{
+			//System.out.println("There is a an node and a next node");
 			return true;
 		} 
 		// Checks if we are at the end of the linked list and there is no other
@@ -17,6 +18,7 @@ public class GLLIterator<T> implements Iterator<T> {
 		// can return false.
 		else if (curr != null && curr.getNext() == null)
 		{
+			//System.out.println("There is a node and no next node");
 			return true;
 		}
 		// Only return false when the node itself is null
@@ -29,11 +31,13 @@ public class GLLIterator<T> implements Iterator<T> {
 		//System.out.println("Current: " + curr.getData() + " Next: " + curr.getNext().getData());
 		if(curr.getNext() != null)
 		{
+			//System.out.println("Advancing and returning the current value");
 			T val = curr.getData();
 			curr = curr.getNext();
 			return val;
 		}
 		// sets current to null so that the next hasNext() call returns false.
+		//System.out.println("returning the current value");
 		T val = curr.getData();
 		curr = null;
 		return val;
